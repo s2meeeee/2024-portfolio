@@ -3,9 +3,8 @@
 
 .warp {
   height: 100vh;
-  color: white;
+  color: #b9b9b9;
 }
-
 .content-box {
   width: 95%;
   height: 95%;
@@ -39,7 +38,6 @@
 
     .info-img {
       border-radius: 5%;
-      background-color: white;
       .img__photo {
         width: 90%;
         height: 80%;
@@ -55,15 +53,34 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
-      font-weight: bold;
       .info-title__text {
         font-size: 40px;
+        font-weight: bold;
       }
       .info-title__subtext {
-        font-size: 60px;
+        font-size: 50px;
         text-transform: uppercase;
-        color: cadetblue;
+        font-family: "DNFBitBitv2";
+
+        &::after {
+          content: "";
+          margin-left: 0.3rem;
+          border-right: 4px solid #777;
+          animation: cursor 0.9s infinite steps(2);
+        }
+        @keyframes cursor {
+          from {
+            border-right-color: #222;
+          }
+          to {
+            border-right-color: #777;
+          }
+        }
       }
+    }
+    .info-intro {
+      border-radius: 5%;
+      background-color: white;
     }
   }
 }
