@@ -78,9 +78,19 @@
         }
       }
     }
-    .info-intro {
-      border-radius: 5%;
-      background-color: white;
+  }
+  //css 캐스케이팅으로
+  //태그선택자로 지정되어 info보다 우선순위가 낮아 이전 스타일이 적용되어
+  //info밖으로 따로 적어줌
+
+  .info-nav {
+    .nav-container {
+      height: 100%;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      .nav-container__item {
+        background-color: darkgray;
+      }
     }
   }
 }
