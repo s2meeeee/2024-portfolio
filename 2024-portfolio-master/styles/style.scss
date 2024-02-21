@@ -6,42 +6,46 @@
   color: #b9b9b9;
 }
 .content-box {
-  width: 95%;
-  height: 95%;
+  width: 97%;
+  height: 100%;
   margin: auto;
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 30px;
-  background-color: #2b2e33;
+  grid-template-columns: 0.8fr 0.1fr 1.5fr;
+  gap: 20px;
   padding: 10px;
+  box-sizing: border-box;
   .info {
-    padding-left: 20px;
+    padding-left: 30px;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.7fr 1.3fr;
     grid-template-rows: repeat(4, 1fr);
-    gap: 20px;
 
-    :nth-child(2) {
-      grid-column: 2 / span 2;
-    }
     :nth-child(3) {
-      grid-column: 1 / span 3;
+      grid-column: 1 / span 2;
       grid-row: 2 / span 2;
     }
+
     :last-child {
-      grid-column: 1 / span 3;
+      grid-column: 1 / span 2;
     }
 
     .info-img {
-      border-radius: 5%;
-      .img__photo {
-        width: 90%;
-        height: 80%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .img-box {
+        position: relative;
+        width: 145px;
+        height: 145px;
         border-radius: 50%;
-        border: 5px solid white;
-        background-image: url(https://source.unsplash.com/random);
-        background-size: cover;
+        background-color: #da8b93;
+        overflow: hidden;
+        .img-box__plofile {
+          position: absolute;
+          padding-top: 10px;
+          width: 100%;
+        }
       }
     }
 
@@ -50,12 +54,13 @@
       flex-direction: column;
       justify-content: center;
       gap: 10px;
+      overflow: hidden;
       .info-title__text {
         font-size: 40px;
         font-weight: bold;
       }
       .info-title__subtext {
-        font-size: 50px;
+        font-size: 40px;
         text-transform: uppercase;
         font-family: "DNFBitBitv2";
 
@@ -75,30 +80,69 @@
         }
       }
     }
-  }
-  .Project {
-    display: grid;
-    grid-template-rows: 0.2fr 1.8fr;
-    margin-right: 2%;
-    .info-nav {
-      .nav-container {
-        height: 100%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        gap: 10px;
-        .nav-container__item {
-          width: 50px;
-          height: 50px;
-          background-color: darkcyan;
-          //css 캐스케이팅으로 nav태그를 사용하였던 것을 div로 바꿈
-        }
+
+    .info-intro {
+      padding-top: 20px;
+      width: 100%;
+      .info-intro__title {
+        font-size: 25px;
+        line-height: 28px;
+        margin-bottom: 35px;
+        font-weight: bold;
+      }
+      .info-intro__text {
+        font-weight: 600;
+        font-size: 14px;
+        width: 50%;
+        line-height: 19px;
       }
     }
-    .project-container {
-      margin-bottom: 3%;
-      border-radius: 3%;
+  }
+  .navicon {
+    .nav-container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .nav-container__item {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(194, 196, 196);
+        //css 캐스케이팅으로 nav태그를 사용하였던 것을 div로 바꿈
+      }
+    }
+  }
+
+  .Project {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .project-section {
+      position: absolute;
+      border-radius: 5%;
+      width: 100%;
+      height: 100%;
       background-color: #242424;
+      display: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .portfolio-work {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin: auto;
+        width: 90%;
+        height: 90%;
+        background-color: #b9b9b9;
+      }
+    }
+    .show {
+      display: block;
     }
   }
 }
