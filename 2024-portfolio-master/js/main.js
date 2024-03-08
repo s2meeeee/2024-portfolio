@@ -1,3 +1,5 @@
+//TypingEffect 이벤트 시작
+
 const $text = document.querySelector(".info-title__subtext");
 
 // 글자 모음
@@ -50,3 +52,15 @@ function wait(ms) {
 
 // 초기 실행
 setTimeout(typing, 1500);
+
+//TypingEffect 이벤트 끝
+
+// //fadein 이벤트 시작
+
+// window.onload = function () {
+//   var elementsToShow = document.querySelectorAll(".info-intro__text");
+
+//   elementsToShow.forEach(function (element) {
+//     element.classList.add("visible");
+//   });
+// };

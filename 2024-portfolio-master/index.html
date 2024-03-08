@@ -24,6 +24,7 @@
             <p class="info-intro__title">
               안녕하세요! <br />개발자 심선미입니다.
             </p>
+            <!-- info-intro__text 클래스 추가 -->
             <span class="info-intro__text">
               저의 포트폴리오를<br />
               보러 와주셔서 감사합니다.<br />
@@ -55,23 +56,27 @@
         <section class="navicon">
           <ul class="nav-container">
             <li class="nav-container__item">
-              <i class="fa-solid fa-code"></i>
+              <i class="fa-solid fa-code fa-lg"></i>
             </li>
             <li class="nav-container__item">
-              <i class="fa-regular fa-address-card"></i>
+              <i class="fa-regular fa-address-card fa-lg"></i>
             </li>
             <li class="nav-container__item">
-              <i class="fa-solid fa-book-open-reader"></i>
+              <i class="fa-solid fa-book-open-reader fa-lg"></i>
             </li>
             <li class="nav-container__item"></li>
           </ul>
         </section>
         <section class="Project">
-          <div class="project-section show">
+          <div class="project-section">
             <!-- .show 클래스를 .project-section 요소에 추가 -->
             <div class="project-section-work">
               <div class="work-right">
-                <a href="#" class="work-oled work">
+                <a
+                  href="https://www.oledspace.com/kr/"
+                  target="_blank"
+                  class="work-oled work"
+                >
                   <h2 class="work-oled-logo">OLED</h2>
                   <div class="work-oled-box">
                     <div class="work-oled-box__name">LG Display</div>
@@ -98,7 +103,11 @@
                 </a>
               </div>
               <div class="work-life">
-                <a href="#" class="work-gstg work">
+                <a
+                  href="https://gstgmall.com/index.html"
+                  target="_blank"
+                  class="work-gstg work"
+                >
                   <div class="work-gstg__name">GSTGMALL</div>
                   <span class="work-gstg__text"
                     >We created pages for artificial turf and interior industry
@@ -109,17 +118,74 @@
               </div>
             </div>
           </div>
-          <div class="project-section"></div>
+          <div class="project-section show">
+            <div class="project-section-about">
+              <div class="about-textbox">
+                <h3 class="about-textbox-title">Introduce</h3>
+                <!-- 가상선택자이용 -->
+                <div class="about-textbox-text">
+                  안녕하세요 저는,<br />
+
+                  배움을 즐거워하고 새로운 것을 겁내지 않고 도전하는
+                  심선미입니다. 저는 코딩에 흥미를 갖게 되면서 독학을시작하였고,
+                  프리랜서로 활동하며 혼자임에 있어 많은 한계를 경험하고
+                  해쳐나가는 경험을 하고있습니다.
+                  <br />
+                  이러한 경험으로 알게 된 바,업무에 책임감을 가지고 끝까지
+                  처리해 내는 것 또한 저의 큰 장점이라 생각합니다. 이러한 장점을
+                  가지고 큰 기량을 펼칠 수 있을 거라 확신합니다.
+                  <br />
+                  지금도 저는 탄탄한 기본기를 바탕으로 새로운 언어에 대한 빠른
+                  변화에 빠른 대응을 할 수 있는 퍼블리셔가 되고 있습니다. 저의
+                  부족한 부분도 빠르게 보완하여 실전에 투입되었을 때 저의 많은
+                  역량을 보여드리고 싶습니다.
+                  <br />
+                  기회를 주신다면 귀사의 발전에 반드시 기여하고 나아가겠습니다.
+                </div>
+              </div>
+              <div class="about-skack">
+                <h3 class="about-skack-title">stack</h3>
+                <div class="about-skack-option">
+                  <span class="skack-option__front">front-skack</span>
+                  <ul class="skack-option__img">
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                  </ul>
+
+                  <span class="skack-option__design">design-skack</span>
+                  <ul class="skack-option__img">
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                  </ul>
+
+                  <span class="skack-option__remote">Remote Repositorys</span>
+                  <ul class="skack-option__img">
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                    <li ><img src="" alt=""></li>
+                  </ul>
+Remote Repository
+                </div>
+                </ul>
+              </div>
+            </div>
+          </div>
           <div class="project-section"></div>
           <div class="project-section"></div>
         </section>
       </div>
+      <div class="backimg"></div>
     </div>
     <script
       src="https://kit.fontawesome.com/f01502651a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/TypingEffect.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./js/work.js"></script>
   </body>
 </html>
