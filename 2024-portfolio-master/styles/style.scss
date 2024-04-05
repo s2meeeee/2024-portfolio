@@ -319,38 +319,34 @@
             width: 500px;
           }
 
-          // .blog-content-item {
-          //   // display: flex;
-          //   // align-items: center;
-          //   // justify-content: center;
-          //   width: 300px;
-          //   height: 220px;
-          //   background: #3a3842;
-          //   border-radius: 25px;
-          //   margin: 15px;
-          // }
-          // .item-box {
-          //   cursor: pointer;
-          //   box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2),
-          //     -3px -1px 5px 5px rgba(141, 140, 146, 0.3),
-          //     -1px -1px 4px 2px rgba(141, 140, 146, 0.3);
-          //   transition: 0.1s ease-in-out;
+          .blog-content-item {
+            // display: flex;
+            // align-items: center;
+            // justify-content: center;
+            width: 300px;
+            height: 220px;
+            background: #3a3842;
+            border-radius: 25px;
+            margin: 15px;
+          }
+          .item-box {
+            cursor: pointer;
+            box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.2),
+              -3px -1px 5px 5px rgba(141, 140, 146, 0.3),
+              -1px -1px 4px 2px rgba(141, 140, 146, 0.3);
+            transition: 0.1s ease-in-out;
 
-          //   &:hover {
-          //     background: hsla(0, 1%, 15%, 0.85);
-          //   }
+            &:hover {
+              background: hsla(0, 1%, 15%, 0.85);
+            }
 
-          //   &:active {
-          //     box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
-          //       -5px -5px 10px 2.5px rgba(33, 33, 34, 0.3),
-          //       -1px -1px 4px 2px rgba(33, 33, 34, 0.3);
-          //     background: #3a3842;
-          //   }
-          // }
-        }
-        #velog-posts {
-          min-width: 200px; /* 최소 너비 */
-          min-height: 200px; /* 최소 높이 */
+            &:active {
+              box-shadow: 5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
+                -5px -5px 10px 2.5px rgba(33, 33, 34, 0.3),
+                -1px -1px 4px 2px rgba(33, 33, 34, 0.3);
+              background: #3a3842;
+            }
+          }
         }
       }
     }
