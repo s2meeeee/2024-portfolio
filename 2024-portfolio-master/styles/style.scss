@@ -147,15 +147,15 @@
       width: 100%;
       color: #222;
       .project-section {
+        display: none;
         width: 100%;
         height: 100%;
         // padding: 30px 30px 30px 30px;
         background-color: #222;
         border-radius: 5%;
         box-sizing: border-box;
-        // overflow-y: scroll;
         .project-section-work {
-          overflow: scroll;
+          // overflow: scroll;
 
           height: 100%;
           display: grid;
