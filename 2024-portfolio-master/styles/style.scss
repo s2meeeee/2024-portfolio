@@ -1,6 +1,12 @@
 @import "reset.scss";
 @import "variables.scss";
 
+@mixin respond-to($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
 .warp {
   height: 100vh;
   color: #b9b9b9;
@@ -118,8 +124,6 @@
         flex-direction: column;
         justify-content: end;
         align-items: start;
-        .footer-data {
-        }
       }
     }
     .navicon {
@@ -150,10 +154,12 @@
         display: none;
         width: 100%;
         height: 100%;
-        // padding: 30px 30px 30px 30px;
+        padding: 30px;
         background-color: #222;
         border-radius: 5%;
         box-sizing: border-box;
+        overflow: scroll;
+
         .project-section-work {
           // overflow: scroll;
 
@@ -186,7 +192,7 @@
               .work-oled-box {
                 display: flex;
                 font-size: 20px;
-                align-items: center;
+                align-items: end;
                 .work-oled-box__name {
                   flex-grow: 1;
                 }
@@ -211,6 +217,10 @@
                 line-height: 50px;
                 text-align: center;
                 font-family: "DungGeunMo";
+                @include respond-to(1440px) {
+                  font-size: 30px;
+                  line-height: 30px;
+                }
               }
             }
             .work__marshall {
@@ -269,12 +279,12 @@
             font-weight: 600;
             display: inline;
             color: white;
-            padding-bottom: 7px;
+            margin: 5px;
             border-bottom: 2px solid white;
           }
           .about-textbox {
             .about-textbox-text {
-              padding-top: 50px;
+              padding-top: 40px;
               padding-right: 9rem;
               font-size: 18px;
               line-height: 25px;
@@ -283,6 +293,7 @@
 
           .about-skack {
             .about-skack-option {
+              padding-top: 20px;
               display: flex;
               align-items: center;
               gap: 20px;
@@ -371,6 +382,16 @@
       }
       .show {
         display: block;
+      }
+    }
+    @include respond-to(1440px) {
+      .work-oled-box__text {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .work-gstg__text {
+        font-size: 12px;
       }
     }
   }
