@@ -1,9 +1,9 @@
-const tabItem = document.querySelectorAll("nav-container__item");
-const tabpage = document.querySelectorAll("project-section");
+const tabItem = document.querySelectorAll(".nav-container__item");
+const tabPage = document.querySelectorAll(".project-section");
 
 tabItem.forEach((item, index) => {
   item.addEventListener("click", (e) => {
-    tabpage.forEach((content) => {
+    tabPage.forEach((content) => {
       content.classList.remove("show");
     });
 
@@ -13,6 +13,6 @@ tabItem.forEach((item, index) => {
     });
 
     tabItem[index].classList.add("show");
-    tabContent[index].classList.add("show");
+    tabPage[index].classList.add("show");
   });
 });

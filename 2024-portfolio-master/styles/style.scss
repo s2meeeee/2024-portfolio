@@ -13,6 +13,8 @@
   position: relative;
   padding: 20px 20px 20px 20px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 
   .content-box {
     width: 100%;
@@ -94,17 +96,18 @@
         width: 100%;
 
         .info-intro__title {
-          font-size: 25px;
-          line-height: 28px;
+          font-size: 23px;
+          line-height: 30px;
           margin-bottom: 35px;
           font-weight: bold;
+          color: #ffdfdf;
         }
 
         .info-intro__text {
           font-weight: 600;
-          font-size: 14px;
+          font-size: 16px;
           width: 50%;
-          line-height: 19px;
+          line-height: 23px;
           opacity: 0;
           overflow: hidden;
           animation: fade-in 1.5s ease-in-out forwards;
@@ -124,6 +127,20 @@
         flex-direction: column;
         justify-content: end;
         align-items: start;
+        gap: 30px;
+        padding-bottom: 20px;
+
+        .footer-data {
+          .data-box {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            width: 100%;
+            .date__img {
+              width: 45px;
+            }
+          }
+        }
       }
     }
     .navicon {
@@ -158,7 +175,7 @@
         background-color: #222;
         border-radius: 5%;
         box-sizing: border-box;
-        overflow: scroll;
+        // overflow: scroll;
 
         .project-section-work {
           // overflow: scroll;
@@ -226,6 +243,7 @@
             .work__marshall {
               background-image: url(../img/marshall6.png);
               background-size: cover;
+              background-position: center center;
               display: flex;
               flex-direction: column;
               justify-content: flex-end;
@@ -254,8 +272,16 @@
               border-radius: $round;
             }
             .work-box {
-              background-color: darkgrey;
               border-radius: $round;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 50px;
+              color: #ffdfdf;
+
+              .work-finish__text {
+                text-align: center;
+              }
             }
           }
           // .shadow {
@@ -287,7 +313,10 @@
               padding-top: 40px;
               padding-right: 9rem;
               font-size: 18px;
-              line-height: 25px;
+              line-height: 30px;
+              // @include respond-to(1440px) {
+              //   padding-right: 0;
+              // }
             }
           }
 
@@ -316,6 +345,7 @@
         }
 
         .project-section-blog {
+          height: 100%;
           .blog-content {
             box-sizing: border-box;
             height: 100%;
@@ -325,6 +355,9 @@
             flex-wrap: wrap;
             gap: 15px;
             // row-gap: 30px;
+            overflow-y: scroll;
+            -ms-overflow-style: none; /* 인터넷 익스플로러 */
+            scrollbar-width: none; /* 파이어폭스 */
 
             .blog-content-item {
               display: flex;
@@ -358,25 +391,28 @@
               .item-cotent-box {
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: 15px;
                 color: #b9b9b9;
                 width: 90%;
                 height: 90%;
+                font-weight: bold;
 
                 .item-box__img {
                   width: 100%;
                   border-radius: 10%;
                 }
                 .item-box__title {
-                  font-weight: bold;
-                  font-size: 18px;
+                  font-size: 17px;
                 }
                 .item-box__text {
                   font-size: 12px;
-                  line-height: 22px;
+                  line-height: 20px;
                 }
               }
             }
+          }
+          .blog-content::-webkit-scrollbar {
+            display: none; /* 크롬, 사파리, 오페라, 엣지 */
           }
         }
       }
@@ -384,15 +420,20 @@
         display: block;
       }
     }
-    @include respond-to(1440px) {
-      .work-oled-box__text {
-        font-size: 16px;
-        line-height: 20px;
-      }
+  }
+}
 
-      .work-gstg__text {
-        font-size: 12px;
-      }
-    }
+@include respond-to(1440px) {
+  .work-oled-box__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .work-gstg__text {
+    font-size: 12px;
+  }
+
+  .about-textbox-text {
+    padding: 0;
   }
 }
